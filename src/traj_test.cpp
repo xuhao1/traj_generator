@@ -253,9 +253,10 @@ void uav_pos_call_back(const nav_msgs::Odometry& msg){
                 cmd.param2 = des_y*10000;
                 cmd.param3 = des_z*10000;
                 if (change_yaw) {
-                    cmd.param4 = 666666;
-                } else {
                     cmd.param4 = des_yaw*10000;
+                } else {
+                    cmd.param4 = 666666;
+
                 }
                 cmd.param5 = des_vx*10000;
                 cmd.param6 = des_vy*10000;
