@@ -19,7 +19,7 @@
 using namespace Eigen;
 using namespace std;
 
-#define mean_speed 1.8
+#define mean_speed 0.5
 
 int change_yaw = 1;
 
@@ -306,7 +306,47 @@ std::vector<Vector3d> traj0 = {
     Vector3d(1.0, 1.0, 1.5),
     Vector3d(1.0, -1.0, 0.8),
     Vector3d(-2.0, 1.0, 1.2),
-    Vector3d(-1.0, -0.5, 0.5),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
+    Vector3d(1.0, 1.0, 1.5),
+    Vector3d(1.0, -1.0, 0.8),
+    Vector3d(-2.0, 1.0, 1.2),
+    Vector3d(-2.0, -1, 0.8),
 };
 
 geometry_msgs::PoseArray poses_from_position(std::vector<Vector3d> traj) {
