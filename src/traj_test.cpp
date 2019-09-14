@@ -253,7 +253,7 @@ void uav_pos_call_back(const nav_msgs::Odometry& msg){
                 cmd.param2 = des_y*10000;
                 cmd.param3 = des_z*10000;
                 if (change_yaw) {
-                    cmd.param4 = des_yaw*10000;
+                    cmd.param4 = -des_yaw*10000;
                 } else {
                     cmd.param4 = 666666;
 
@@ -367,6 +367,7 @@ geometry_msgs::PoseArray poses_from_position(std::vector<Vector3d> traj) {
 
 
 void trigger_callback( const std_msgs::Int8 & m  ){
+    ROS_INFO("p %d", m.data);
      if (m.data > 0) {
         // if ( is_init ){
         //     std::cout << "[#INFO] get traj trigger info." << std::endl;
@@ -386,9 +387,9 @@ void trigger_callback( const std_msgs::Int8 & m  ){
 
             auto pa = poses_from_position(traj0);
             generate_traj(pa);
-             if (m.data == 1) {
+             if (m.data == 2) {
                 change_yaw = 1;
-            } else if(m.data == 2) {
+            } else if(m.data == 1) {
                 change_yaw = 0;
             }
         }
